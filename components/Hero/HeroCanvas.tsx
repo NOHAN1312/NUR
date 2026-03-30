@@ -35,7 +35,7 @@ export default function HeroCanvas({ themeClass = 'bg-[#001827]', timeOpacity = 
         if (!isMounted) break;
         promises.push(new Promise<void>((resolve) => {
           const img = new Image();
-          img.src = `/images/hero/${i}.jpg`;
+          img.src = `/NUR/images/hero/${i}.jpg`;
           img.onload = () => {
             if (isMounted) imagesRef.current[i] = img;
             // Draw first frame immediately once loaded
@@ -126,7 +126,7 @@ export default function HeroCanvas({ themeClass = 'bg-[#001827]', timeOpacity = 
     <div className={`fixed inset-0 w-full h-full -z-50 pointer-events-none transition-colors duration-1000 ${themeClass}`}>
       <div 
         className={`absolute inset-0 bg-cover bg-center brightness-[0.7] transition-opacity duration-1000 z-0 ${timeOpacity}`}
-        style={{ backgroundImage: 'url(/images/hero/1.jpg)' }}
+        style={{ backgroundImage: 'url(/NUR/images/hero/1.jpg)' }}
         aria-hidden="true"
       />
       <motion.canvas

@@ -10,8 +10,8 @@ export default function AudioPlayer() {
   useEffect(() => {
     let audio: HTMLAudioElement;
     try {
-      // Load user-provided background audio
-      audio = new Audio('/audio/audio.m4a');
+      // Load user-provided background audio with Next.js basePath prefix for GitHub pages
+      audio = new Audio('/NUR/audio/audio.m4a');
       audio.loop = true;
       audio.volume = 0.4; // Subtle background volume
       audioRef.current = audio;
