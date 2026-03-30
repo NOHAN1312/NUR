@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageProvider';
 import { translations } from '@/lib/translations';
 
-export default function HeroTextOverlays({ containerRef }: { containerRef: React.RefObject<HTMLDivElement> }) {
+export default function HeroTextOverlays({ containerRef }: { containerRef: React.RefObject<HTMLDivElement | null> }) {
   const { lang } = useLanguage();
   const t = translations[lang].hero;
 
