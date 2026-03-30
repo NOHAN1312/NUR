@@ -1,0 +1,26 @@
+@import "tailwindcss";
+:root {
+  --hero-gradient: linear-gradient(135deg, #001827 0%, #005f73 100%);
+  --hero-accent: #00E5FF;
+}
+
+/* Hide scrollbar for a cleaner scrollytelling experience */
+.hero-no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hero-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Shimmer animation for primary CTA hover */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+}
